@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/icons/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/snowfall.css" />
+    <link rel="stylesheet" href="css/fancybox.css" />
     <title>Apple Watch</title>
   </head>
   <body>
@@ -110,7 +111,13 @@
           class="row align-items-center position-relative overflow-x-hidden overflow-y-hidden"
         >
           <div class="col-12 col-lg-5">
-            <img src="img/1 (5).jpeg" alt="" class="img-fluid" />
+            <a
+              href="img/1 (5).jpeg"
+              data-fancybox="gallery"
+              data-caption="Apple Watch"
+            >
+              <img src="img/1 (5).jpeg" alt="" class="img-fluid" />
+            </a>
           </div>
           <div class="col-12 col-lg-3">
             <div class="text-white">
@@ -215,12 +222,18 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/snowfall.js"></script>
+    <script src="js/fancybox.umd.js"></script>
     <script>
+      // fancybox
+      Fancybox.bind("[data-fancybox]");
+
+      // aos
       AOS.init({
         duration: 2000,
         once: true,
       });
 
+      // snowfall
       var defaultOptions = {
         minSize: 10,
         maxSize: 30,
@@ -232,7 +245,6 @@
       };
 
       var snow = new Snowfall(defaultOptions);
-
     </script>
   </body>
 </html>
